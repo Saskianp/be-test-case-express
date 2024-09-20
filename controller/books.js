@@ -21,7 +21,7 @@ exports.getBooks = async(req, res) => {
           message: "success",
           data: books,
       });
-    } catch {
+    } catch (error) {
         res.status(500).json({ message: "Error fetching books", error })
     }
 }

@@ -4,7 +4,7 @@ const Borrow = require('../models/borrow');
 const moment = require("moment");
 
 exports.borrowBook = async (req, res) => {
-    const { memberCode, bookCode } = req.body;
+    const { memberCode, bookCodes } = req.body;
 
     try {
         if (!Array.isArray(bookCodes) || bookCodes.length === 0 || bookCodes.length > 2) {
